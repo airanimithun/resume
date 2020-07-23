@@ -38,7 +38,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-gap:20px;
-    padding: 24px 0;
+    padding: 20px 0;
     border-bottom : 1px solid lightgray;
 }
 
@@ -66,10 +66,12 @@ img.avatar{
     color: #236FB2;
 }
 
+.links-container{
+    margin: 10px 0px 20px 0px;
+}
 .links {
-    display: flex;
-    margin: 10px 0 20px 0;
-    justify-content: space-evenly;
+    display: flex;    
+    justify-content: space-around;
 }
 
 .link-items {
@@ -78,18 +80,14 @@ img.avatar{
     align-items: center;
 }
 
-.link-items svg {
-    margin-right: 6px;
-}
-
 .link-items:last-child {
     justify-content: flex-end;
 }
 
 
 .job, .project {
-    margin-bottom: 24px;
-    padding-bottom: 24px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid lightgrey;
 }
 
@@ -112,6 +110,7 @@ img.avatar{
 
 .job-time {
     font-size: 14px;
+    font-style: italic;
 }
 
 .work-experience{
@@ -184,3 +183,8 @@ img.avatar{
         grid-template-columns: 1fr 1fr;
     }
 }
+
+@media print {
+    .page-break {page-break-after: always;}
+    .page-start {margin-top: 50px;}
+  }
